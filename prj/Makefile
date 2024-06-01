@@ -22,10 +22,21 @@
 #LIBS=-lpthread -lodbc
 
 # Defines for Linux (MySQL C API Wrapper) 
+# CXX=g++
+# CCFLAGS=-g -O2 -Wall -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS `mysql_config --include` -DMYSQL_ODBC -DODBC_WRAPPER -DUSE_PREPARE
+# LDFLAGS=-g -O2 -Wall
+# LIBS=`mysql_config --libs_r`
+
+# Defines for Linux (MySQL C API Wrapper)
+# CXX=g++
+# CCFLAGS=-g -O2 -Wall -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -I/usr/include/mysql -DMYSQL_ODBC -DODBC_WRAPPER -DUSE_PREPARE
+# LDFLAGS=-g -O2 -Wall
+# LIBS=-lpthread -lmysqlclient_r
+
 CXX=g++
-CCFLAGS=-g -O2 -Wall -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS `mysql_config --include` -DMYSQL_ODBC -DODBC_WRAPPER -DUSE_PREPARE
+CCFLAGS=-g -O2 -Wall -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -I/usr/include/mysql -DMYSQL_ODBC -DODBC_WRAPPER -DUSE_PREPARE
 LDFLAGS=-g -O2 -Wall
-LIBS=`mysql_config --libs_r`
+LIBS=-lpthread -lmysqlclient_r
 
 # Defines for Linux (PostgreSQL ODBC) *Remember "Threading = 2" for /etc/odbcinst.ini
 #CXX=g++

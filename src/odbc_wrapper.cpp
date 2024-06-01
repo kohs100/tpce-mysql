@@ -4,6 +4,7 @@
 #ifdef ODBC_WRAPPER
 #include "../inc/odbc_wrapper.h"
 #include <string.h>
+#include <stdlib.h>
 
 using namespace TPCE;
 

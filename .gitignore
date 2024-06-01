@@ -1,0 +1,6 @@
+flat_out/*
+obj/*
+bin/*
+
+*.bio
+*.bio.parsed

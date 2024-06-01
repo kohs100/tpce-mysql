@@ -4,7 +4,9 @@
 #ifndef _ODBC_WRAPPER_H
 #define _ODBC_WRAPPER_H
 
-#include <my_global.h>
+#define TRUE 1
+#define FALSE 0
+
 #include <mysql.h>
 #include <my_sys.h>
 
